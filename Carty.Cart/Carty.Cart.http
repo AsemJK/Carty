@@ -1,0 +1,6 @@
+@Carty.Cart_HostAddress = http://localhost:5082
+
+GET {{Carty.Cart_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

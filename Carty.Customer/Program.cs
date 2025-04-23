@@ -15,8 +15,12 @@ builder.Services.AddDbContext<CustomerContext>(options =>
 });
 builder.Services.AddScoped<ICustomerRepository, CustomerRepository>();
 builder.Services.AddControllers();
+builder.AddServiceDefaults();
+builder.Services.AddSwaggerGen();
 var app = builder.Build();
 
+app.UseSwagger();
+app.UseSwaggerUI();
 // Configure the HTTP request pipeline.
 
 app.UseHttpsRedirection();
